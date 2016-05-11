@@ -64,57 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-2333" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/05/11/2333/" class="article-date">
-  <time datetime="2016-05-11T11:01:00.000Z" itemprop="datePublished">2016-05-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/11/2333/">个人博客建立第一步之hexo/Users/lanou/HBuilderProjects/个人博客-blog/source/_posts/个人博客建立之hexo.md</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天学习了使用HEXO+Github搭建一个属于自己的博客，方法简单，耗时较少，现在将搭建方法分享给大家~（以下教程以mac系统为例）</p>
-<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="安装Node-js（必装）"><a href="#安装Node-js（必装）" class="headerlink" title="安装Node.js（必装）"></a>安装Node.js（必装）</h3><p>作用：用于生成静态页面<br>可去Node.js官网下载对应的最新版本，一直点下一步直至完成即可。  </p>
-<h3 id="安装Git（必装）"><a href="#安装Git（必装）" class="headerlink" title="安装Git（必装）"></a>安装Git（必装）</h3><p>作用：把本地的hexo内容提交到github上<br>只需安装Xcode即可，里面自带Git</p>
-<h3 id="申请Git账号（必须）"><a href="#申请Git账号（必须）" class="headerlink" title="申请Git账号（必须）"></a>申请Git账号（必须）</h3><p>作用：用来做博客的远程创库、域名、服务器之类<br>申请git账号可去git官网<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a>进行申请注册，流程与一般的注册账号差不多。（如何配置SSH KEYS会在下一节讲到）</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="在这之前，先要了解终端（即windos下的命令提示符）的常用命令与使用方法"><a href="#在这之前，先要了解终端（即windos下的命令提示符）的常用命令与使用方法" class="headerlink" title="在这之前，先要了解终端（即windos下的命令提示符）的常用命令与使用方法"></a>在这之前，先要了解终端（即windos下的命令提示符）的常用命令与使用方法</h3><p>终端位于LaunchPad的其他下，常用命令如下（注意：所有命令后都需加上一个空格）<br>ls: 显示当前目录<br>cd 某名称: 进入某目录     例子：  cd Desktop/Users/lanou/HBuilderProjects/个人博客-blog/source/_posts/个人博客建立之hexo2.md: 进入桌面  </p>
-<p>cd ..:  返回上层目录    cd ../../../ 返回上几层  </p>
-<p>mKdir 文件夹名称: 创建文件夹  </p>
-<p>touch 文件名称: 创建文件   </p>
-<p>rm 文件名称: 删除文件  </p>
-<p>rm -rf 文件夹名称: 删除文件夹  </p>
-<p>pwd+空格:查看当前文件的目录路径  </p>
-<p>ifconfig:查看本地的  </p>
-<p>在了解了上面的终端命令操作后，建议在桌面新建一个bolg文件夹作为本地存储博客的文件夹，然后通过终端命令进入该文件夹</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/2333/" data-id="cio2wbs75000095r87agkfnv6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript-Node-js-hexo/">JavaScript Node.js hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-笑尼玛比" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/05/11/笑尼玛比/" class="article-date">
@@ -149,16 +98,19 @@
 <p>rm -rf 文件夹名称: 删除文件夹  </p>
 <p>pwd+空格:查看当前文件的目录路径  </p>
 <p>ifconfig:查看本地的  </p>
+<hr>
 <p>在了解了上面的终端命令操作后，建议在桌面新建一个bolg文件夹作为本地存储博客的文件夹，然后通过终端命令进入该文件夹里安装Hexo。  </p>
 <p>执行如下命令安装Hexo: sudo npm install -g hexo（-g代表全局，即安装在系统里的意思）   </p>
 <p>安装之后，执行init命令初始化hexo，命令:  </p>
 <p>hexo init  </p>
 <p>至此，全部安装工作已经完成！blog就是你的博客根目录，所有的操作都在里面进行。  </p>
+<p>最后，hexo generate (简写hexo g) ,生成静态页面。   </p>
+<p>hexo server  在浏览器输入<a href="http://localhost:4000，预览本地页面" target="_blank" rel="external">http://localhost:4000，预览本地页面</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/笑尼玛比/" data-id="cio2wbs7g000395r8pomwc6q0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/笑尼玛比/" data-id="cio2wi35f00019nr8qtjjpt9k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript-Node-js-hexo/">JavaScript Node.js hexo</a></li></ul>
@@ -205,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio2wbs7a000195r8fqpv48vf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio2wi35900009nr89ng1njqh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,10 +209,6 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2016/05/11/2333/">个人博客建立第一步之hexo/Users/lanou/HBuilderProjects/个人博客-blog/source/_posts/个人博客建立之hexo.md</a>
-          </li>
         
           <li>
             <a href="/2016/05/11/笑尼玛比/">个人博客建立第一步之hexo/Users/lanou/HBuilderProjects/个人博客-blog/source/_posts/个人博客建立之hexo.md</a>
