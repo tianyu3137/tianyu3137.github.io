@@ -77,7 +77,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -227,7 +227,7 @@
         <p>安装完hexo，拥有了自己的blog文件夹之后，我们就可以进入搭建个人博客的最后一步，配置git。  </p>
 <h2 id="配置Github-建立Repository"><a href="#配置Github-建立Repository" class="headerlink" title="配置Github-建立Repository"></a>配置Github-建立Repository</h2><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】,此为固定写法，不可更改。  </p>
 <p>建立新仓库的步骤，登入个人github账号，点击下图中的New Repository<br><img src="http://i2.buimg.com/324354f5fae83993.png" alt=""></p>
-<p>然后会进入如下页面<img src="http://i2.buimg.com/55548a0bc7a54ee7.png" alt=""><br>在Repository name处填写仓库名，格式必须是【your_user_name.github.io】！！！（如图，我的Repository name即tianyu3137.github.io<br>参照这格式填写）可以在Description处添加描述，选择Public，勾上README，最后点击Create repository即可！  </p>
+<p>然后会进入如下页面<br><img src="http://i2.buimg.com/55548a0bc7a54ee7.png" alt=""><br>在Repository name处填写仓库名，格式必须是【your_user_name.github.io】！！！（如图，我的Repository name即tianyu3137.github.io<br>参照这格式填写）可以在Description处添加描述，选择Public，勾上README，最后点击Create repository即可！  </p>
 <h2 id="关联仓库与本地文件夹"><a href="#关联仓库与本地文件夹" class="headerlink" title="关联仓库与本地文件夹"></a>关联仓库与本地文件夹</h2><p>进入你建立的blog文件夹，以我这为示<img src="http://i2.buimg.com/1f7ead39726dbcc1.png" alt="">(版本不同文件夹可能略有变化，但没有影响),使用编辑器进入_config.yml文件，我们需要通过它来建立关联，翻到最下面<img src="http://i3.buimg.com/74dc8f015ff19f44.png" alt="">，将deploy下的type和repo改成图中这样的，记得将repo下的tianyu3137改成你自己的用户名！</p>
 <p>PS:在这之前需要绑定SSH Keys，如果你不会可以搜索网上教程，在此不作叙述。  </p>
 <p>然后在终端你的blog文件夹下运行命令: npm install hexo-deployer-git —save.</p>
@@ -337,67 +337,6 @@
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript-Node-js-hexo/">JavaScript Node.js hexo</a></li></ul>
 	</div>
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/11/hello-world/" class="article-date">
-  	<time datetime="2016-05-11T06:20:33.000Z" itemprop="datePublished">2016-05-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
       
 
       
