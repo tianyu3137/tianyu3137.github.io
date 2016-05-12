@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a>
+						<a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/伪元素/" style="font-size: 10px;">伪元素</a> <a href="/tags/标签/" style="font-size: 10px;">标签</a>
 					</div>
 				</section>
 				
@@ -197,6 +197,133 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-weiyuansu" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/12/weiyuansu/" class="article-date">
+  	<time datetime="2016-05-12T14:49:13.000Z" itemprop="datePublished">2016-05-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/12/weiyuansu/">weiyuansu</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><p>伪类有4个，分别是link,visited,hover和active,其中最常用的是hover伪类。语法格式为 :link/visited/hover/active.  </p>
+<p><code>:active  效果为鼠标点击时，元素增加特效，鼠标松开时，特效消失。</code>  </p>
+<p><code>:hover   当我们需要对某一对象添加鼠标悬浮时改变样式，可以用到hover(多说一句，:hover的好搭档cursor属性，当属性值为pointer时，光标覆盖目标时会变成手型。cursor还有url属性，可以为其自定义图片地址)</code>  </p>
+<p><code>:focus   当我们需要让点击后的元素一直拥有某些样式，这时用:active就不行了，因为松开鼠标样式会消失。:focus可以用在&lt;input&gt;标签上</code></p>
+<p><code>:visited   将特殊的样式添加到被访问过的链接</code>     </p>
+<p>关于这四个伪类的顺序有一个比较幽默的说法，爱恨法则 love&amp;hate,即link(l),visited(v),hover(h),active(a).</p>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><p>伪元素共有5个，分别是before,after,first-line,first-letter,selection.其中最常用的是before和after。语法格式为 ::before/::after/::first-line/::first-letter/::selection(虽然:号也可以被浏览器解析，但是为了区分伪类和伪元素，建议使用::)  </p>
+<p><code>::before   在某元素之前插入某些内容</code>  </p>
+<p><code>::after   在某元素之后插入某些内容</code>   </p>
+<p><code>::first-letter   将特殊的样式添加到文本的首字母</code></p>
+<p><code>::first-line   将特殊的样式添加到文本的首行</code></p>
+<p><code>::selection   改变选中区域的背景色和文本颜色（只可改变这两个属性）</code>  </p>
+<p>下面通过几段代码来演示伪元素的用法与效果<br>     first-line与first-letter:</p>
+<pre><code>div{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+div::first-line{
+    font-size: 22px;
+    color: red;
+}
+div::first-letter{
+    color: white;
+}    
+
+&lt;div&gt;
+付款单就疯狂倒计时福克斯&lt;br /&gt;
+反抗军大煞风景&lt;br /&gt;
+防空洞里是否&lt;br /&gt;
+&lt;/div&gt;   
+</code></pre><p>效果如下图<br>            <img src="http://i4.buimg.com/f18d3909dd6d38ba.png" alt="">  </p>
+<p>before与after:   </p>
+<pre><code>div{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    background-color: skyblue;
+}
+div::before{
+    content: &apos;&apos;;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+}
+div::after{
+    content: &apos;&apos;;
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: purple;
+}
+
+&lt;div&gt;&lt;/div&gt;   
+</code></pre><p>效果如下图:(注意必须添加属性content:’’,可在引号内添加文本内容，并且before和after两个伪元素本身不具备块或行内标签属性，必须添加display变成块或行内块或进行定位)<br><img src="http://i4.buimg.com/046c16dd3c907189.png" alt="">   </p>
+<p>selection:    </p>
+<pre><code>span::selection{
+            background-color: red;
+            color: gray;
+        }
+&lt;span&gt;前端很好玩，值得好好学习！&lt;/span&gt;  
+</code></pre><p>效果如图: <img src="http://i3.buimg.com/49d82e7d7d10760d.png" alt="">  </p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>伪类的效果可以通过添加一个实际的类来达到，而伪元素的效果则需要通过添加一个实际的元素才能达到，这也是为什么他们一个称为伪类，一个称为伪元素的原因。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/伪元素/">伪元素</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/标签/">标签</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-博客建立第二步之git" class="article article-type-post" itemscope itemprop="blogPost">
   
