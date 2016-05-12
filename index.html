@@ -77,7 +77,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -197,71 +197,6 @@
 </nav>
 
       <div class="body-wrap">
-  
-    <article id="post-第二步配置git" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/12/第二步配置git/" class="article-date">
-  	<time datetime="2016-05-12T01:07:35.000Z" itemprop="datePublished">2016-05-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: 个人博客建立第二步-配置git<br>date: 2016-05-12 09:07:35<br>tags: hexo Github node.js   </p>
-<hr>
-<p>安装完hexo，拥有了自己的blog文件夹之后，我们就可以进入搭建个人博客的最后一步，配置git。  </p>
-<h2 id="配置Github-建立Repository"><a href="#配置Github-建立Repository" class="headerlink" title="配置Github-建立Repository"></a>配置Github-建立Repository</h2><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】,此为固定写法，不可更改。  </p>
-<p>建立新仓库的步骤，登入个人github账号，点击下图中的New Repository<br><img src="http://i2.buimg.com/324354f5fae83993.png" alt=""></p>
-<p>然后会进入如下页面<img src="http://i2.buimg.com/55548a0bc7a54ee7.png" alt=""><br>在Repository name处填写仓库名，格式必须是【your_user_name.github.io】！！！（如图，我的Repository name即tianyu3137.github.io<br>参照这格式填写）可以在Description处添加描述，选择Public，勾上README，最后点击Create repository即可！  </p>
-<h2 id="关联仓库与本地文件夹"><a href="#关联仓库与本地文件夹" class="headerlink" title="关联仓库与本地文件夹"></a>关联仓库与本地文件夹</h2><p>进入你建立的blog文件夹，以我这为示<img src="http://i2.buimg.com/1f7ead39726dbcc1.png" alt="">(版本不同文件夹可能略有变化，但没有影响),使用编辑器进入_config.yml文件，我们需要通过它来建立关联，翻到最下面<img src="http://i3.buimg.com/74dc8f015ff19f44.png" alt="">，将deploy下的type和repo改成图中这样的，记得将repo下的tianyu3137改成你自己的用户名！</p>
-<p>PS:在这之前需要绑定SSH Keys，如果你不会可以搜索网上教程，在此不作叙述。  </p>
-<p>然后在终端你的blog文件夹下运行命令: npm install hexo-deployer-git —save.</p>
-<p>成功后继续运行命令，hexo g，成功后继续运行hexo d即可！  </p>
-<p>之后在浏览器输入xxx.github.io（把xxx改成你的用户名），就能看到属于自己的博客了！</p>
-<p>每次更新博客后，只需重新运行hexo g和hexo d 就可以同步更新个人博客！  </p>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>hexo new “postName”  新建文章  </p>
-<p>hexo new page “pageName”  新建页面  </p>
-<p>hexo g  生成静态页面至public目录  </p>
-<p>hexo server  开启预览访问端口（默认端口4000，ctrl+c关闭server）  </p>
-<p>hexo d   将.deploy目录部署到GitHub  </p>
-<p>hexo version   查看Hexo的版本  </p>
-<hr>
-<p>git clone   下载线上仓库地址  </p>
-<p>git status   查看当前的仓库状态  </p>
-<p>git add .  </p>
-<p>git commit -m ‘修改的内容提要’    提交到缓存区</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
   
     <article id="post-建立之hexo" class="article article-type-post" itemscope itemprop="blogPost">
   
