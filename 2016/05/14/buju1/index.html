@@ -4,17 +4,22 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives | 前端的点滴</title>
+  <title>Css的导航布局 | 前端的点滴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="前端的点滴">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="几种常见的导航条。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Css的导航布局">
+<meta property="og:url" content="http://yoursite.com/2016/05/14/buju1/index.html">
 <meta property="og:site_name" content="前端的点滴">
-<meta property="og:description">
+<meta property="og:description" content="几种常见的导航条。">
+<meta property="og:image" content="http://i3.buimg.com/1faca4d4dafccf0f.png">
+<meta property="og:image" content="http://i4.buimg.com/8ab540e366cc8ad9.png">
+<meta property="og:image" content="http://i4.buimg.com/ec2190876df53398.png">
+<meta property="og:updated_time" content="2016-05-14T08:25:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端的点滴">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Css的导航布局">
+<meta name="twitter:description" content="几种常见的导航条。">
+<meta name="twitter:image" content="http://i3.buimg.com/1faca4d4dafccf0f.png">
   
     <link rel="alternative" href="/atom.xml" title="前端的点滴" type="application/atom+xml">
   
@@ -196,146 +201,242 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-buju1" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/14/buju1/" class="archive-article-date">
-  	<time datetime="2016-05-14T07:05:37.000Z" itemprop="datePublished">5月 14</time>
+    <div class="article-meta">
+      <a href="/2016/05/14/buju1/" class="article-date">
+  	<time datetime="2016-05-14T07:05:37.000Z" itemprop="datePublished">2016-05-14</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/14/buju1/">Css的导航布局</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Css的导航布局
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Css3/">Css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/布局/">布局</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+      </div>
+      
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/12/weiyuansu/" class="archive-article-date">
-  	<time datetime="2016-05-12T14:49:13.000Z" itemprop="datePublished">5月 12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/12/weiyuansu/">伪类与伪元素</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>几种常见的导航条。</p>
+<a id="more"></a>  
+<p>1.中间自适应，两边固定宽度的导航。（原理是两边利用浮动，设置固定宽度或百分比，根据需求调整，中间不设置宽度，通过margin撑起。）  </p>
+<pre><code>.div1{
+    width:250px;
+    height:200px;
+    float:left;
+    background-color:blue;
+}
+.div2{
+    width:250px;
+    height:200px;
+    float:right;
+    background-color:purple;
+}
+.div3{
+    height:200px;
+    background-color:red;
+    margin-left:250px;
+    margin-right:300px;
+}   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/伪元素/">伪元素</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/标签/">标签</a></li></ul>
+&lt;div class=&quot;div1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;div2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;div3&quot;&gt;&lt;/div&gt;   
+</code></pre><p><em>*</em>注意3个div的排序，中间的div放在最后。</p>
+<p>效果如下图，<br><img src="http://i3.buimg.com/1faca4d4dafccf0f.png" alt=""></p>
+<hr>
+<p>2.中间固定宽，两边自适应。(原理是利用两边div浮动到两边，宽度给50%，通过margin负值给中间的div留出空间。） </p>
+<pre><code>body{
+    width:100%;
+    overflow:hidden;
+}
+.div1{
+    width: 50%;
+    height: 100px;
+    float: left;
+    margin-left: -120px;
+    background-color: blue;
+}
+.div2{
+    width: 50%;
+    height: 100px;
+    float: right;
+    margin-right: -120px;
+    background-color: gray;
+
+}
+.div3{
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: black;
+}  
+
+&lt;div class=&quot;div1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;div2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;div3&quot;&gt;&lt;/div&gt;    
+</code></pre><p>需要注意的是给body添加一个宽100%,超出隐藏属性，否则浏览器下方会出现滚动条！  </p>
+<p>效果如下图:  <img src="http://i4.buimg.com/8ab540e366cc8ad9.png" alt=""></p>
+<hr>
+<ol>
+<li>多列分栏导航条  </li>
+</ol>
+<p>先上效果图，<br><img src="http://i4.buimg.com/ec2190876df53398.png" alt="">（中间为透明logo,整个导航具有position-fixed的属性，固定top 0，logo+红色区域宽度固定）   </p>
+<p>这个导航布局相对繁琐，具有多个颜色分明的区域，代码如下:  </p>
+<pre><code>*{
+    margin:0;
+    padding:0;
+}
+.div1{
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+nav{
+    width: 875px;
+    height: 75px;
+    margin:0 auto;
+    position: relative;
+}
+h2{
+    width: 75px;
+    height: 75px;
+    float: left;
+    background-image: url(1.png);
+    background-repeat: no-repeat;
+}
+ul{
+    width: 800px;
+    list-style: none;
+    background-color: red;
+    overflow: hidden;
+    float: right;
+    position: relative;
+}
+nav::before{
+    content: &apos;&apos;;
+    height: 75px;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+    background-color: gold;
+}
+nav::after{
+    content: &apos;&apos;;
+    height: 75px;
+    width: 100%;
+    position: absolute;
+    right: -100%;
+    background-color: gold;
+}
+ul li{
+    float: left;
+    width: 25%;
+    height: 75px;
+}  
+
+&lt;div class=&quot;div1&quot;&gt;
+    &lt;nav&gt;
+    &lt;h2&gt;&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;1&lt;/li&gt;
+            &lt;li&gt;2&lt;/li&gt;
+            &lt;li&gt;3&lt;/li&gt;
+            &lt;li&gt;4&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/div&gt;
+</code></pre><p>此例的难点在于如何处理两边黄色的区域，在代码中使用了伪元素before和after来进行处理，但其实换成div也是可以的。使用了负定位+超出隐藏的办法来进行处理。在Css布局中，灵活应用超出隐藏进行负定位（或者margin）可以解决不少看似繁杂的问题。  </p>
+<hr>
+<p>总结，html+css是网页布局的基础，但是入门虽易，精通却不易，仍需要不断的探索与思考！</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/12/weiyuansu/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">伪类与伪元素</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/12/博客建立第二步之git/" class="archive-article-date">
-  	<time datetime="2016-05-12T03:14:04.000Z" itemprop="datePublished">5月 12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/12/博客建立第二步之git/">个人博客建立第二步之git</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/11/建立之hexo/" class="archive-article-date">
-  	<time datetime="2016-05-11T11:01:00.000Z" itemprop="datePublished">5月 11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/11/建立之hexo/">个人博客建立第一步之hexo</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="buju1" data-title="Css的导航布局" data-url="http://yoursite.com/2016/05/14/buju1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
 
 </div>
       <footer id="footer">
@@ -361,8 +462,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
