@@ -4,22 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>伪类与伪元素 | 前端的点滴</title>
+  <title>调用第三方库解决移动端屏幕适配问题 | 前端的点滴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="伪类伪类有4个，分别是link,visited,hover和active,其中最常用的是hover伪类。语法格式为 :link/visited/hover/active.">
+  <meta name="description" content="今天学了一个新的第三方库，可以较好的解决移动端各尺寸手机适配问题，在此分享出来。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="伪类与伪元素">
-<meta property="og:url" content="http://yoursite.com/2016/05/12/weiyuansu/index.html">
+<meta property="og:title" content="调用第三方库解决移动端屏幕适配问题">
+<meta property="og:url" content="http://yoursite.com/2016/05/14/caonima/index.html">
 <meta property="og:site_name" content="前端的点滴">
-<meta property="og:description" content="伪类伪类有4个，分别是link,visited,hover和active,其中最常用的是hover伪类。语法格式为 :link/visited/hover/active.">
-<meta property="og:image" content="http://i4.buimg.com/f18d3909dd6d38ba.png">
-<meta property="og:image" content="http://i4.buimg.com/046c16dd3c907189.png">
-<meta property="og:image" content="http://i3.buimg.com/49d82e7d7d10760d.png">
-<meta property="og:updated_time" content="2016-05-12T14:57:50.000Z">
+<meta property="og:description" content="今天学了一个新的第三方库，可以较好的解决移动端各尺寸手机适配问题，在此分享出来。">
+<meta property="og:image" content="http://i3.buimg.com/8973f01971807452.gif">
+<meta property="og:image" content="http://i2.buimg.com/6ae4fbd1ec0404f9.png">
+<meta property="og:updated_time" content="2016-05-16T03:08:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="伪类与伪元素">
-<meta name="twitter:description" content="伪类伪类有4个，分别是link,visited,hover和active,其中最常用的是hover伪类。语法格式为 :link/visited/hover/active.">
-<meta name="twitter:image" content="http://i4.buimg.com/f18d3909dd6d38ba.png">
+<meta name="twitter:title" content="调用第三方库解决移动端屏幕适配问题">
+<meta name="twitter:description" content="今天学了一个新的第三方库，可以较好的解决移动端各尺寸手机适配问题，在此分享出来。">
+<meta name="twitter:image" content="http://i3.buimg.com/8973f01971807452.gif">
   
     <link rel="alternative" href="/atom.xml" title="前端的点滴" type="application/atom+xml">
   
@@ -201,11 +200,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-weiyuansu" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-caonima" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/12/weiyuansu/" class="article-date">
-  	<time datetime="2016-05-12T14:49:13.000Z" itemprop="datePublished">2016-05-12</time>
+      <a href="/2016/05/14/caonima/" class="article-date">
+  	<time datetime="2016-05-14T11:24:00.000Z" itemprop="datePublished">2016-05-14</time>
 </a>
     </div>
   
@@ -218,7 +217,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      伪类与伪元素
+      调用第三方库解决移动端屏幕适配问题
     </h1>
   
 
@@ -227,7 +226,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/伪元素/">伪元素</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/标签/">标签</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/响应式/">响应式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/移动端/">移动端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/适配/">适配</a></li></ul>
 	</div>
 
         
@@ -238,77 +237,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><p>伪类有4个，分别是link,visited,hover和active,其中最常用的是hover伪类。语法格式为 :link/visited/hover/active.<br><a id="more"></a></p>
-<p><code>:active  效果为鼠标点击时，元素增加特效，鼠标松开时，特效消失。</code>  </p>
-<p><code>:hover   当我们需要对某一对象添加鼠标悬浮时改变样式，可以用到hover(多说一句，:hover的好搭档cursor属性，当属性值为pointer时，光标覆盖目标时会变成手型。cursor还有url属性，可以为其自定义图片地址)</code>  </p>
-<p><code>:focus   当我们需要让点击后的元素一直拥有某些样式，这时用:active就不行了，因为松开鼠标样式会消失。:focus可以用在&lt;input&gt;标签上</code></p>
-<p><code>:visited   将特殊的样式添加到被访问过的链接</code>     </p>
-<p>关于这四个伪类的顺序有一个比较幽默的说法，爱恨法则 love&amp;hate,即link(l),visited(v),hover(h),active(a).</p>
-<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><p>伪元素共有5个，分别是before,after,first-line,first-letter,selection.其中最常用的是before和after。语法格式为 ::before/::after/::first-line/::first-letter/::selection(虽然:号也可以被浏览器解析，但是为了区分伪类和伪元素，建议使用::)  </p>
-<p><code>::before   在某元素之前插入某些内容</code>  </p>
-<p><code>::after   在某元素之后插入某些内容</code>   </p>
-<p><code>::first-letter   将特殊的样式添加到文本的首字母</code></p>
-<p><code>::first-line   将特殊的样式添加到文本的首行</code></p>
-<p><code>::selection   改变选中区域的背景色和文本颜色（只可改变这两个属性）</code>  </p>
-<p>下面通过几段代码来演示伪元素的用法与效果<br>     first-line与first-letter:</p>
-<pre><code>div{
-    width: 200px;
-    height: 200px;
-    background-color: blue;
-}
-div::first-line{
-    font-size: 22px;
-    color: red;
-}
-div::first-letter{
-    color: white;
-}    
-
-&lt;div&gt;
-付款单就疯狂倒计时福克斯&lt;br /&gt;
-反抗军大煞风景&lt;br /&gt;
-防空洞里是否&lt;br /&gt;
-&lt;/div&gt;   
-</code></pre><p>效果如下图<br>            <img src="http://i4.buimg.com/f18d3909dd6d38ba.png" alt="">  </p>
-<p>before与after:   </p>
-<pre><code>div{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 auto;
-    position: relative;
-    background-color: skyblue;
-}
-div::before{
-    content: &apos;&apos;;
-    position: absolute;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: red;
-}
-div::after{
-    content: &apos;&apos;;
-    position: absolute;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: purple;
-}
-
-&lt;div&gt;&lt;/div&gt;   
-</code></pre><p>效果如下图:(注意必须添加属性content:’’,可在引号内添加文本内容，并且before和after两个伪元素本身不具备块或行内标签属性，必须添加display变成块或行内块或进行定位)<br><img src="http://i4.buimg.com/046c16dd3c907189.png" alt="">   </p>
-<p>selection:    </p>
-<pre><code>span::selection{
-            background-color: red;
-            color: gray;
-        }
-&lt;span&gt;前端很好玩，值得好好学习！&lt;/span&gt;  
-</code></pre><p>效果如图: <img src="http://i3.buimg.com/49d82e7d7d10760d.png" alt="">  </p>
+        <p>今天学了一个新的第三方库，可以较好的解决移动端各尺寸手机适配问题，在此分享出来。<br><a id="more"></a> </p>
+<p>在没有调用第三方库之前，我们一般使用响应式布局来适配各种手机屏幕，通过css的media screen来进行媒体查询。  </p>
+<p>今天介绍的这个库，是由手机淘宝团队开源出的移动端各屏幕适配方案-lib.flexible-这个框架的原理是将视觉稿分成100份（为了以后更好的兼容vh和vw），每一份被称为一个单位a。同时1rem单位被认定为10a。这样一来，对于视觉稿上的元素尺寸换算，只需要原始的px值除以rem基准值即可。</p>
 <hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>伪类的效果可以通过添加一个实际的类来达到，而伪元素的效果则需要通过添加一个实际的元素才能达到，这也是为什么他们一个称为伪类，一个称为伪元素的原因。</p>
+<p>在实际生产中，如果每一次计算px转换rem会非常麻烦，影响开发效率，为了更快进行转换，需要用到一个转换工具-CSSREM。  </p>
+<p>使用sublime编辑器的，可以安装CSSREM这个插件。 </p>
+<p>这是一个可以将CSS的PX值自动转换成rem的插件，非常方便使用。   </p>
+<p>效果如下图:<img src="http://i3.buimg.com/8973f01971807452.gif" alt="">     </p>
+<hr>
+<p>lib.flexible的使用也非常简单，只需在文档底部引入，如图  </p>
+<p><img src="http://i2.buimg.com/6ae4fbd1ec0404f9.png" alt="">  </p>
+<p>也可以在文件下载后，本地引入。  </p>
 
       
     </div>
@@ -318,18 +258,9 @@ div::after{
     
 <nav id="article-nav">
   
-    <a href="/2016/05/14/buju1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Css的导航布局
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/12/博客建立第二步之git/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">个人博客建立第二步之git</div>
+    <a href="/2016/05/14/seo1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端与SEO</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -364,7 +295,7 @@ div::after{
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="weiyuansu" data-title="伪类与伪元素" data-url="http://yoursite.com/2016/05/12/weiyuansu/"></div>
+	<div class="ds-thread" data-thread-key="caonima" data-title="调用第三方库解决移动端屏幕适配问题" data-url="http://yoursite.com/2016/05/14/caonima/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
