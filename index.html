@@ -198,6 +198,68 @@
 
       <div class="body-wrap">
   
+    <article id="post-caonima" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/16/caonima/" class="article-date">
+  	<time datetime="2016-05-16T01:11:17.000Z" itemprop="datePublished">2016-05-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: 调用第三方库解决移动端屏幕适配问题<br>date: 2016-05-14 19:24:00<br>tags: </p>
+<ul>
+<li>响应式</li>
+<li>移动端</li>
+<li>适配</li>
+<li>css</li>
+</ul>
+<hr>
+<p>今天学了一个新的第三方库，可以较好的解决移动端各尺寸手机适配问题，在此分享出来。  </p>
+<p>在没有调用第三方库之前，我们一般使用响应式布局来适配各种手机屏幕，通过css的media screen来进行媒体查询。  </p>
+<p>今天介绍的这个库，是由手机淘宝团队开源出的移动端各屏幕适配方案-lib.flexible-这个框架的原理是将视觉稿分成100份（为了以后更好的兼容vh和vw），每一份被称为一个单位a。同时1rem单位被认定为10a。这样一来，对于视觉稿上的元素尺寸换算，只需要原始的px值除以rem基准值即可。</p>
+<hr>
+<p>在实际生产中，如果每一次计算px转换rem会非常麻烦，影响开发效率，为了更快进行转换，需要用到一个转换工具-CSSREM。  </p>
+<p>使用sublime编辑器的，可以安装CSSREM这个插件。 </p>
+<p>这是一个可以将CSS的PX值自动转换成rem的插件，非常方便使用。   </p>
+<p>效果如下图:<img src="http://i3.buimg.com/8973f01971807452.gif" alt="">     </p>
+<hr>
+<p>lib.flexible的使用也非常简单，只需在文档底部引入，如图  </p>
+<p><img src="http://i2.buimg.com/6ae4fbd1ec0404f9.png" alt="">  </p>
+<p>也可以在文件下载后，本地引入。  </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-seo1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
