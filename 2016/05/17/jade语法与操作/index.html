@@ -12,10 +12,15 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/17/jade语法与操作/index.html">
 <meta property="og:site_name" content="前端的点滴">
 <meta property="og:description" content="Jade是一款基于haml的html模板引擎，采用JavaScript实现，可以方便地在Node.js、Yeoman等框架中使用。">
-<meta property="og:updated_time" content="2016-05-17T06:28:56.000Z">
+<meta property="og:image" content="http://i4.buimg.com/12fb741dcdd857ac.png">
+<meta property="og:image" content="http://i4.buimg.com/9eb0d683b77c1bc7.png">
+<meta property="og:image" content="http://i3.buimg.com/599fb5ab50f190e7.png">
+<meta property="og:image" content="http://i3.buimg.com/3fe56e09e2327a43.png">
+<meta property="og:updated_time" content="2016-05-17T08:09:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jade-简洁的HTML模板引擎">
 <meta name="twitter:description" content="Jade是一款基于haml的html模板引擎，采用JavaScript实现，可以方便地在Node.js、Yeoman等框架中使用。">
+<meta name="twitter:image" content="http://i4.buimg.com/12fb741dcdd857ac.png">
   
     <link rel="alternative" href="/atom.xml" title="前端的点滴" type="application/atom+xml">
   
@@ -78,7 +83,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -238,7 +243,66 @@
 <a id="more"></a>   
 <h2 id="安装Jade"><a href="#安装Jade" class="headerlink" title="安装Jade"></a>安装Jade</h2><p>首先进入<a href="http://gulpjs.com/plugins/" target="_blank" rel="external">gulp搜索页</a>，搜索gulp-jade，进入第一个，我们可以看到gulp-jade的基础语法等信息。  </p>
 <p>在gulp文件夹下创建一个jade文件夹（必须在已安装gulp的文件夹下进行操作，有关gulp的相关操作请查阅后面的gulp-基于流的自动化构建工具），通过终端命令进入jade文件夹，在其中输入npm install gulp-jade –save-dev     ,安装完成后，即可开始编写jade文件。  </p>
-<h2 id="Jade语法"><a href="#Jade语法" class="headerlink" title="Jade语法"></a>Jade语法</h2>
+<h2 id="Jade语法"><a href="#Jade语法" class="headerlink" title="Jade语法"></a>Jade语法</h2><p>新建一个jade文件夹，输入以下代码:  </p>
+<pre><code>doctype
+html
+    head
+        meta(charset=&apos;utf-8&apos;)
+        title
+    body
+        h2#heihei.haha.hoho hello world
+            span 我是span
+                a(href=&apos;&apos;,title=&apos;&apos;)
+            em 我是em
+            .qiaqia(style=&quot;color:red;font-size:18px;&quot;)    
+</code></pre><p>之后进入gulpfile.js文件，输入下图中的代码:  </p>
+<p><img src="http://i4.buimg.com/12fb741dcdd857ac.png" alt="">  </p>
+<p>输入以上代码后，进入终端gulp文件夹，运行命令 gulp cc，在jade文件夹下会生成一个index.html文件，内容如下图<br><img src="http://i4.buimg.com/9eb0d683b77c1bc7.png" alt=""><br>代表jade运行成功！通过终端命令转换成正常的html文件。  </p>
+<hr>
+<h2 id="Jade特点"><a href="#Jade特点" class="headerlink" title="Jade特点"></a>Jade特点</h2><p>通过上面的例子，相信大家都能很快了解Jade的语法模式，主要概括一下有以下几点：<br>1.标签名不变，无需使用尖括号&lt;&gt;围绕。  </p>
+<p>2.标签不具有嵌套性，使用缩进来表示嵌套关系，每级缩进相当于一层嵌套。  </p>
+<p>3.使用标签名称后#someid来表示id属性，无需再使用属性名id=’someid’。   </p>
+<p>4.使用标签名称后.someclass来表示class属性，多个class可连续使用。  </p>
+<p>5.对于带有id或class属性的div标签，可以省略div不写。  </p>
+<p>6.对于其他属性，在标签名后使用括号()来围绕，与html的标签属性使用方式相同，也可用逗号分隔。（如a标签的href）  </p>
+<p>7.在标签名称和所有属性后使用一个空格来分隔其文本内容，即从每个标签名开始第一个不在属性内的空格之后的内容都将被识别为文本。  </p>
+<p>8.对于多行文本，在标签的所有属性之后使用单独的.   其下级缩进的内容都将视为文本。</p>
+<hr>
+<h2 id="Jade引入"><a href="#Jade引入" class="headerlink" title="Jade引入"></a>Jade引入</h2><p>对于一个庞大的项目来说，许多页面都有相同的结构与样式，我们可以通过编写jade文件来引入，语法为include 引入文件名。举例说明：<br>在jade文件夹下创建一个融合.jade文件，输入如下代码  </p>
+<pre><code>doctype
+html
+    head
+        meta(charset=&apos;utf-8&apos;)
+        title
+    body
+        include header.jade
+        h2 梦想的天堂
+        p 绝望的开始
+            span u get it?
+        include footer.jade  
+</code></pre><p>在jade文件夹下创建一个header.jade文件，输入如下代码</p>
+<pre><code>ul
+    li
+        a 腾讯网
+    li
+        a 百度
+    li
+        a 新浪
+    li
+        a 网易  
+</code></pre><p>在jade文件夹下创建一个footer.jade文件，输入如下代码</p>
+<pre><code>ul(style=&quot;color:yellow;width:200px;height:300px;&quot;)
+    li(style=&quot;height:200px;&quot;) 联系我们
+    li 合作企业
+    li 人才招聘
+    li 意见建议
+</code></pre><p>在gulpfile.js中输入下图内容  </p>
+<p><img src="http://i3.buimg.com/599fb5ab50f190e7.png" alt="">  </p>
+<hr>
+<p>之后在jade文件夹下会生成一个融合.html的文件，打开后内容是这样的  </p>
+<p><img src="http://i3.buimg.com/3fe56e09e2327a43.png" alt="">  </p>
+<p>可以在本地预览下结果，这样就不贴图了，仅提供用法。  </p>
+
       
     </div>
     
