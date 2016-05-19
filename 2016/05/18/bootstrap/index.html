@@ -15,7 +15,9 @@
 <meta property="og:image" content="http://i2.buimg.com/dceddda216885c71.png">
 <meta property="og:image" content="http://i2.buimg.com/c678cd7908b7b788.png">
 <meta property="og:image" content="http://i2.buimg.com/a4ac66de24a6cb1e.png">
-<meta property="og:updated_time" content="2016-05-18T13:31:40.000Z">
+<meta property="og:image" content="http://i2.buimg.com/33ed40275201cbf6.png">
+<meta property="og:image" content="http://i2.buimg.com/46c240dd1d6e8e62.png">
+<meta property="og:updated_time" content="2016-05-19T00:57:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bootstrap入门指导">
 <meta name="twitter:description" content="Bootstrap是Twitter推出的一个用于前端开发的开源工具包，是目前最受欢迎的前端框架。Bootstrap是基于HTML、CSS、JavaScript的，它简洁灵活，使得Web开发更加快捷。">
@@ -294,7 +296,79 @@
 <p>通过例码揭示了网格的基本运作，下表总结了Bootstrap网格系统如何跨多个设备工作：<br><img src="http://i2.buimg.com/a4ac66de24a6cb1e.png" alt="">  </p>
 <p>Bootstrap的网格系统需要不断练习加深理解，此例亦只是抛砖引玉之用。  </p>
 <hr>
-<p>a</p>
+<h2 id="Bootstrap排版"><a href="#Bootstrap排版" class="headerlink" title="Bootstrap排版"></a>Bootstrap排版</h2><p> 1、全局样式   </p>
+<hr>
+<pre><code>·移除body的margin声明
+·设置body的背景色为白色
+·为排版设置了基本的ziti、字号和行高
+·设置全局链接颜色，且当链接处于悬浮‘:hover’状态时才会显示下划线样式。
+</code></pre><p>2、标题样式  </p>
+<hr>
+<p>（1）重置了h1~h6的默认样式  </p>
+<pre><code>·重新设置了margin-top和margin-bottom的值，h1-h3重置后的值都是20px；h4-h6重置后的值都是10px
+·所有标题的行高都是1.1（也就是font-size的1.1倍），而且文本颜色和字体都继承父元素的颜色和字体
+·固定不同级别标题字体大小，h1=36px，h2=30px,h3=24px,h4=18px,h5=14px和h6=12px
+</code></pre><p>（2）定义了标题类名<br>标题类名有.h1~.h6，举例说明:</p>
+<pre><code>&lt;div class=&quot;h1&quot;&gt;
+    我用了h1的格式。
+&lt;/div&gt;
+</code></pre><p>效果，<img src="http://i2.buimg.com/33ed40275201cbf6.png" alt="">  </p>
+<p>（3）副标题<br>副标题标签small,举例说明:  </p>
+<pre><code>&lt;h1&gt;
+    我是主标题
+    &lt;small&gt;
+    我是副标题
+    &lt;/small&gt;
+&lt;/h1&gt;  
+</code></pre><p>效果，<img src="http://i2.buimg.com/46c240dd1d6e8e62.png" alt="">  </p>
+<p>PS:注意，副标题的字体大小会继承主标题的字体大小。  </p>
+<p>3、强调部分 </p>
+<hr>
+<p>强调内容：</p>
+<p>（1）.lead   一般配合段落标签使用  </p>
+<p>（2）斜体效果的标签  </p>
+<pre><code>&lt;em&gt;、&lt;i&gt;、&lt;cite&gt;  
+</code></pre><p>（3）加粗效果的标签  </p>
+<pre><code>&lt;strong&gt;、&lt;b&gt;  
+</code></pre><p>（4）其他效果标签  </p>
+<pre><code>&lt;small&gt;  
+</code></pre><p>强调相关的类： </p>
+<pre><code>text-muted:提示，使用浅灰色(#999)  
+text-primary:主要，使用蓝色（#428bca）
+text-success:成功，使用浅绿色（#3c763d）
+text-info:通知信息，使用浅蓝色(#31708f)
+text-warning:警告，使用黄色(#8a6d3b)
+text-danger:危险，使用褐色(#a94442)
+</code></pre><p>4、文本对齐风格  </p>
+<hr>
+<pre><code>text-left:左对齐
+text-center:居中对齐
+text-right:右对齐
+text-justify:两端对齐  
+</code></pre><p>5、列表  </p>
+<hr>
+<p>（1）ul ol，去序列 </p>
+<pre><code>list-unstyled
+&lt;ol class=&quot;list-unstyled&quot;&gt;
+</code></pre><p>（2）ul ol 水平列表     </p>
+<pre><code>list-inline  
+把垂直列表换成水平列表，而且去掉项目符号（编号），保持水平显示
+</code></pre><p>（3）dl 水平列表  </p>
+<pre><code>dl-horizontal
+屏幕大于768px的时候，添加类名‘.dl-horizontal’才具有水平定义列表效果
+</code></pre><h2 id="Bootstrap代码风格"><a href="#Bootstrap代码风格" class="headerlink" title="Bootstrap代码风格"></a>Bootstrap代码风格</h2><p>（1）code  </p>
+<pre><code>一般是针对于单个单词或单个句子的代码
+</code></pre><p>（2）pre</p>
+<pre><code>一般是针对于多行代码（也就是成块的代码）
+</code></pre><p>PS：不管使用哪种代码风格，在代码中碰到小于号(&lt;)要使用硬编码”&lt;”来替代，大于号(&gt;)使用”&gt;”来替代  </p>
+<p>（3）pre-scrollable  </p>
+<pre><code>只要在pre标签上添加类名&quot;.pre-scrollable&quot;，就可以控制代码块区域最大高度为340px,一旦超出这个高度，就会在Y轴出现滚动条。  
+</code></pre><h2 id="Bootstrap图片"><a href="#Bootstrap图片" class="headerlink" title="Bootstrap图片"></a>Bootstrap图片</h2><p>使用方法非常简单，只需在<img>标签上添加对应的类名，主要有以下4个：  </p>
+<pre><code>img-responsiv:响应式图片，主要针对于响应式设计
+img-rounded:圆角图片
+img-circle:圆形图片
+img-thumbnail:缩略图片 
+</code></pre><h2 id="Bootstrap图标"><a href="#Bootstrap图标" class="headerlink" title="Bootstrap图标"></a>Bootstrap图标</h2><p>Bootstrap框架中也为大家提供了近200个不同的icon图片，而这些图标都是使用CSS3的@font-face属性配合字体来实现的icon效果。<a href="http://v3.bootcss.com/components/" target="_blank" rel="external">附上网页地址</a></p>
 
       
     </div>
