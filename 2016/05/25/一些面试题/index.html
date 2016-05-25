@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/25/一些面试题/index.html">
 <meta property="og:site_name" content="前端的点滴">
 <meta property="og:description" content="5.25-一些面试题">
-<meta property="og:updated_time" content="2016-05-25T12:01:52.000Z">
+<meta property="og:updated_time" content="2016-05-25T14:24:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些面试题">
 <meta name="twitter:description" content="5.25-一些面试题">
@@ -310,47 +310,92 @@
     text-align:center;
 }
 </code></pre><p>7.var foo=0,bar=1;foo=foo||bar;这段代码运行后的foo的值是什么？  </p>
-<p>a&amp;&amp;b:将a,b转换成Boolean类型，再执行逻辑与  </p>
-<p>a||b:将a,b转换为Boolean类型，再执行逻辑或  </p>
-<p>此题答案为1.  </p>
-<p>当||时，找到为true的分项就停止处理，并返回该分项的值，否则执行完，并返回最后分项的值。  </p>
-<p>当&amp;&amp;时，找到为false的分项就停止处理，并返回该分项的值。</p>
-<p>8.如何判断JavaScript变量的数据类型？</p>
-<p>可以使用typeof来检测变量的基本类型()，返回String、Number、Boolean、Undefined、Null、Object之一。  </p>
-<p>使用instanceof来检测引用数据类型，返回Function或Array。</p>
+<pre><code>a&amp;&amp;b:将a,b转换成Boolean类型，再执行逻辑与  
+
+a||b:将a,b转换为Boolean类型，再执行逻辑或  
+
+此题答案为1.  
+
+当||时，找到为true的分项就停止处理，并返回该分项的值，否则执行完，并返回最后分项的值。  
+
+当&amp;&amp;时，找到为false的分项就停止处理，并返回该分项的值。
+</code></pre><p>8.如何判断JavaScript变量的数据类型？</p>
+<pre><code>可以使用typeof来检测变量的基本类型()，返回String、Number、Boolean、Undefined、Null、Object之一。  
+</code></pre><p>使用instanceof来检测引用数据类型，返回Function或Array。</p>
 <p>9.编码实现:获取页面中id为test的元素并添加时间处理函数，处理函数用来取消事件冒泡和阻止对象默认行为</p>
-<p>10.跨域请求数据的解决方案有哪些？</p>
-<p>11.写出你所知道的所有JavaScript函数的定义方法</p>
+<p>10.跨域请求数据的解决方案有哪些？  </p>
+<pre><code>1、JSONP方式  
+2、表单POST方式  
+3、服务器代理  
+4、Html5的XDomainRequest
+5、Flash request
+</code></pre><p>11.写出你所知道的所有JavaScript函数的定义方法</p>
 <p>12.写出你所知道的所有JavaScript对象的定义方法</p>
 <p>13.写出你所知道的所有JavaScript类的定义方法</p>
 <p>14.简单实现jQuery的$，用JS原生</p>
 <p>15.说说下面两个表达的区别<br>    $.extend();<br>    $.fn.extend();</p>
 <p>16.移动端屏幕的物理分辨率和逻辑分辨率的区别</p>
-<p>17.你做的页面在哪些浏览器测试过？这些浏览器的内核分别是什么？</p>
-<p>18.解释Css Sprites作用是什么</p>
-<p>19.HTML5响应式设计框架有哪些？</p>
-<p>20.JS中如何阻止事件冒泡和默认事件</p>
+<pre><code>物理分辨率是硬件固有的分辨率，逻辑分辨率是通过算法达到的。
+</code></pre><p>17.你做的页面在哪些浏览器测试过？这些浏览器的内核分别是什么？</p>
+<pre><code>Chrome浏览器，内核webkit
+Firefox浏览器，内核moz/Gecko
+IE浏览器，内核ms/Trident
+欧朋浏览器，内核o/Presto
+safair浏览器，内核webkit
+</code></pre><p>18.解释Css Sprites作用是什么</p>
+<pre><code>极大地减少了HTTP请求的次数，减轻服务器压力，同时缩短了悬停加载图片所需要的延迟，使效果更流畅，不会停顿。
+</code></pre><p>19.HTML5响应式设计框架有哪些？</p>
+<pre><code>Bootstrap、Boilerplate、Foundation、Uikit
+</code></pre><p>20.JS中如何阻止事件冒泡和默认事件</p>
 <p>21.JS的ajax请求出现跨域问题有什么解决办法？</p>
 <p>22.$(this)和this关键字在jQuery中有何不同？  </p>
 <pre><code>$(this)返回一个JQ对象，你可以对它调用多个JQ方法，比如用text()获取文本，用val()获取值等等。而this代表当前元素，它是JavaScript关键词中的一个，表示上下文中的当前DOM元素。你不能对它调用JQ方法，直到它被$()函数包裹。例如$(this)。
 </code></pre><p>23.当项目的某个模块发生问题了，你是怎么定位错误的？你用的调试工具是什么？  </p>
-<p>24.在和后端进行异步请求时，很容易陷入嵌套太深的陷阱？  </p>
-<p>25.一个正则表达式匹配所有二级域名是9game.cn和其目录下的网址，比如<a href="http://abc.9game.cn/web/非常重要的时候，怎么保护他？" target="_blank" rel="external">http://abc.9game.cn/web/非常重要的时候，怎么保护他？</a>  </p>
+<p>24.在和后端进行异步请求时，很容易陷入嵌套太深的陷阱？</p>
+<pre><code>---  
+</code></pre><p>25.一个正则表达式匹配所有二级域名是9game.cn和其目录下的网址，比如<a href="http://abc.9game.cn/web/非常重要的时候，怎么保护他？" target="_blank" rel="external">http://abc.9game.cn/web/非常重要的时候，怎么保护他？</a>  </p>
 <p>26.项目在本地没问题，但是放到线上就有问题了，你是怎么解决的？  </p>
 <p>27.在项目开发完成后，根据雅虎性能优化规则，需要对html,js,css图片做出怎么的处理？是否可以借助构建工具实现自动化？</p>
 <p>28.常用布局的实现（两列布局、三列适应布局、两列等高适应布局）  </p>
 <p>29.JS如何改变元素属性及CSS值  </p>
 <p>30.常用的DOM操作，新建、添加、删除、移动  </p>
-<p>31.JQ的bind、live、on、delegate的区别</p>
+<pre><code>新建节点，document.creatElement
+添加节点，appendChild   insertBefore
+删除节点，removeChild
+</code></pre><p>31.JQ的bind、live、on、delegate的区别</p>
 <p>32.JS变量提升、匿名函数、原型继承、作用域、闭包机制  </p>
 <p>33.对HTML协议的理解  </p>
-<p>34.盒模型介绍（可以画图说明）  </p>
-<p>35.块级元素和行内元素的区别以及如何清除浮动  </p>
-<p>36.CSS中position属性有哪几个值，区别是什么？  </p>
-<p>37.CSS选择器的种类及优先级  </p>
-<p>38.浏览器兼容问题以及常用的css hack  </p>
+<hr>
+<p>34.盒模型介绍（可以画图说明）</p>
+<pre><code>对盒模型的理解，不难，画图即可解释清楚。  
+</code></pre><p>35.块级元素和行内元素的区别以及如何清除浮动  </p>
+<pre><code>块元素自占一行，支持宽高属性设置，支持margin,padding值。
+行元素在一排显示，不支持设置宽高，内容撑开宽高，不支持纵向的padding值。
+</code></pre><p>36.CSS中position属性有哪几个值，区别是什么？  </p>
+<pre><code>有fixed,relative,absolute,static.
+absolute,生成绝对定位元素，相对于static定位以外的第一个父元素进行定位。
+fixed，生成绝对定位元素，相对于浏览器窗口进行定位。
+relative，生成相对定位的元素，相对于其正常位置进行定位。
+static,没有定位。元素出现在正常的流中(忽略top,bottom,left,right或者z-index声明)
+</code></pre><p>37.CSS选择器的种类及优先级  </p>
+<pre><code>常用的有，id选择器，class选择器，标签选择器和后代选择器。
+优先级为:id选择器&gt;class选择器&gt;标签选择器
+后代选择器优先级需根据其前面的元素选择器来判断。
+</code></pre><p>38.浏览器兼容问题以及常用的css hack  </p>
 <p>39.请举例HTML新增的标签（10个以上）</p>
-
+<pre><code>&lt;nav&gt; 定义导航链接
+&lt;video&gt; 定义视频
+&lt;audio&gt; 定义音频内容
+&lt;section&gt; 定义区域
+&lt;header&gt; 定义一个页面或一个区域的头部
+&lt;footer&gt; 定义一个页面或一个区域的页脚
+&lt;article&gt; 定义独立的内容
+&lt;aside&gt; 定义侧边栏
+&lt;canvas&gt; 定义图形
+&lt;datalist&gt; 定义选项列表，需配合input元素使用
+&lt;details&gt; 用于描述文档细节
+&lt;progress&gt; 定义任务的过程
+</code></pre>
       
     </div>
     
