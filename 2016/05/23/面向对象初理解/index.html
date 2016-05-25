@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: 面向对象 | 前端的点滴</title>
+  <title>JavaScript的面向对象浅解 | 前端的点滴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="前端的点滴">
-<meta property="og:url" content="http://yoursite.com/tags/面向对象/index.html">
+  <meta name="description" content="JavaScript是一种基于对象(object-based)的语言，你遇到的所有东西几乎都是对象。此篇简述面向对象的基础知识点。
+数据类型JS中分别有两种数据类型，基本类型和引用类型。基本类型指的是简单的数据段，而引用类型指那些可能由多个值构成的对象。  
+基本数据类型共有6个，分别是字符串(String)、数值(Number)、布尔(Boolean)、未定义(Undefined)、空(Null">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript的面向对象浅解">
+<meta property="og:url" content="http://yoursite.com/2016/05/23/面向对象初理解/index.html">
 <meta property="og:site_name" content="前端的点滴">
-<meta property="og:description">
+<meta property="og:description" content="JavaScript是一种基于对象(object-based)的语言，你遇到的所有东西几乎都是对象。此篇简述面向对象的基础知识点。
+数据类型JS中分别有两种数据类型，基本类型和引用类型。基本类型指的是简单的数据段，而引用类型指那些可能由多个值构成的对象。  
+基本数据类型共有6个，分别是字符串(String)、数值(Number)、布尔(Boolean)、未定义(Undefined)、空(Null">
+<meta property="og:updated_time" content="2016-05-24T02:29:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端的点滴">
-<meta name="twitter:description">
+<meta name="twitter:title" content="JavaScript的面向对象浅解">
+<meta name="twitter:description" content="JavaScript是一种基于对象(object-based)的语言，你遇到的所有东西几乎都是对象。此篇简述面向对象的基础知识点。
+数据类型JS中分别有两种数据类型，基本类型和引用类型。基本类型指的是简单的数据段，而引用类型指那些可能由多个值构成的对象。  
+基本数据类型共有6个，分别是字符串(String)、数值(Number)、布尔(Boolean)、未定义(Undefined)、空(Null">
   
     <link rel="alternative" href="/atom.xml" title="前端的点滴" type="application/atom+xml">
   
@@ -196,53 +203,158 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-面向对象初理解" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/23/面向对象初理解/" class="archive-article-date">
-  	<time datetime="2016-05-23T08:31:15.000Z" itemprop="datePublished">5月 23</time>
+    <div class="article-meta">
+      <a href="/2016/05/23/面向对象初理解/" class="article-date">
+  	<time datetime="2016-05-23T08:31:15.000Z" itemprop="datePublished">2016-05-23</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/23/面向对象初理解/">JavaScript的面向对象浅解</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript的面向对象浅解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JavaScript是一种基于对象(object-based)的语言，你遇到的所有东西几乎都是对象。此篇简述面向对象的基础知识点。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>JS中分别有两种数据类型，基本类型和引用类型。基本类型指的是简单的数据段，而引用类型指那些可能由多个值构成的对象。  </p>
+<p>基本数据类型共有6个，分别是字符串(String)、数值(Number)、布尔(Boolean)、未定义(Undefined)、空(Null)和对象(Object).  </p>
+<p>基本数据类型使用typeof来进行检测，例：  </p>
+<pre><code>var zz = 123;
+console.log(typeof zz)   // Number  
+var vv = &quot;abc&quot;;
+console.log(typeof vv)   // String  
+</code></pre><p>注意，如果使用typeof来判断引用类型数据，那么永远都返回Object(Chrome浏览器除外，Chrome浏览器现已支持typeof值为function。但数组仍返回Object)。例：  </p>
+<pre><code>var a = [1,2,3]
+console.log(typeof a)   //Object
+var b = function(){
+    console.log(&apos;dfs&apos;)
+}
+console.log(typeof b);   // Object(Chrome下为function)
+</code></pre><hr>
+<p>引用数据类型只有两个，分别是函数(Function)与数组(Array)。</p>
+<p>引用数据类型使用instanceof来进行检测，返回的是Boolean值，只有true和false两个结果。例：</p>
+<pre><code>var c = new Person();
+alert(c instanceof Object)   // true
+alert(c instanceof Person)   // true
+alert(c instanceof Dog)   // false  
+</code></pre><p>注意：如果使用instanceof来检查基本类型，则永远返回false。</p>
+<pre><code>var d = &apos;333&apos;;
+alert(d instanceof Number)   // false
+</code></pre><hr>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>关于函数，首先我们要了解的是，函数的三种创建方式，分别是普通函数、匿名函数和构建函数。  </p>
+<p>1.普通函数。</p>
+<pre><code>function aaa(){}
+aaa()   
+</code></pre><p>上面的例子即是一个普通函数，通过给予函数一个名称来进行调用。<br>（需要注意的是，普通函数属于一级公民，优先级最高。即浏览器在读取JS文件的时候，会先预览一遍，把文件中的普通函数提到文件的最上方，之后再依照从上到下的顺序进行解析。）  </p>
+<p>在常见的面试题中，常用普通函数的特性进行挖坑！  </p>
+<p>2.匿名函数   </p>
+<pre><code>var fn1 = function(){}   
+fn1()
+</code></pre><p>上面即一个匿名函数，与普通函数不同的是，函数本身是没有名称的，而是通过定义一个变量进行赋值，使其等于那个函数。  </p>
+<p>3.构建函数</p>
+<pre><code>var fn3 = new Function(&quot;console.log(&apos;我是fn3&apos;)&quot;)
+fn3()
+</code></pre><p>以new操作符调用构造函数的时候，函数内部发生以下变化：<br>1、创建一个空对象，并且this变量引用该对象，同时还继承了</p>
+<hr>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/23/js面试题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          js面试题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/18/bootstrap/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">bootstrap入门指导</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="面向对象初理解" data-title="JavaScript的面向对象浅解" data-url="http://yoursite.com/2016/05/23/面向对象初理解/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -268,9 +380,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
