@@ -15,7 +15,9 @@
 <meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/4A7D822E-5207-4D8C-AFF7-928F27D0554A.png">
 <meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/D8C374A3-A815-43B9-A222-14BC1782F663.png">
 <meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/195AAF30-93DE-47DB-9C65-AE15A80C3BBF.png">
-<meta property="og:updated_time" content="2016-05-26T11:32:34.000Z">
+<meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/17332F69-8F43-4B58-B106-A031712C9186.png">
+<meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/603D7267-3486-4F24-B95A-EAED70D28E99.png">
+<meta property="og:updated_time" content="2016-05-26T12:28:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的数组和字符串方法">
 <meta name="twitter:description" content="在JS中，数组和字符串的方法还是比较重要的，在此做个总结。">
@@ -260,7 +262,7 @@ f.shift(&apos;k&apos;);
 </code></pre><p>6、join()-将数组的元素组成字符串  </p>
 <pre><code>var f = [&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]
 f.join();
-</code></pre><p>图片效果如下，<br><img src="http://o7j52x8bi.bkt.clouddn.com/4A7D822E-5207-4D8C-AFF7-928F27D0554A.png" alt=""><br>可在join()括号内自行添加”/“等符号作为划分，默认是,   </p>
+</code></pre><p>代码效果如下，<br><img src="http://o7j52x8bi.bkt.clouddn.com/4A7D822E-5207-4D8C-AFF7-928F27D0554A.png" alt=""><br>可在join()括号内自行添加”/“等符号作为划分，默认是,   </p>
 <p>7、reverse()-将数组中的元素顺序反转排序  </p>
 <pre><code>var f = [&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]
 f.reverse(); 
@@ -278,6 +280,52 @@ var o = f.slice(0,2)
 var o = f.splice(2,1,&quot;x&quot;)
 //  o = a,b,x,d,e  
 </code></pre><p>11、sort()-数组排序  </p>
+<pre><code>var f = [40,100,1,5,25,10];
+var o = f.sort(function(a,b){return b-a});  
+//  o = 100,40,25,10,5,1
+</code></pre><p><img src="http://o7j52x8bi.bkt.clouddn.com/17332F69-8F43-4B58-B106-A031712C9186.png" alt="">  </p>
+<hr>
+<h2 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h2><p>1、charAt()-返回字符串的某一位  </p>
+<pre><code>var str = &quot;abcdef&quot;
+alert(str.charAt(3))   //d
+</code></pre><p>2、search()-查找，返回的是位置，如果找不到返回-1  </p>
+<pre><code>var str = &quot;abcdef&quot;
+alert(str.search(&quot;b&quot;))   //1
+</code></pre><p>3、slice,substr和substring的区别  </p>
+<p>首先，它们都接收两个参数，slice和substring接受的是起始位置和结束位置（不包括结束位置），而substr接受的则是起始位置和所要返回的字符串长度。   </p>
+<pre><code>var test = &apos;hello world&apos;;
+
+alert(test.slice(4,7));    // o w
+alert(test.substring(4,7))   // o w
+alert(test.substr(4,7))     // o world
+</code></pre><p>注意，substring是以两个参数中较小一个作为起始位置，较大的参数作为结束位置。   </p>
+<pre><code>alert(test.substring(7,4))   // o w
+</code></pre><p>接着，当substring接收的参数是负数时，slice会将它字符串的长度与对应的负数相加，结果作为参数；substr则仅仅是将第一个参数与字符串长度相加后的结果作为第一个参数；substring则将负参数都直接转换为0.</p>
+<pre><code>var test = &apos;hello world&apos;
+
+alert(test.slice(-3));     // rld
+alert(test.substring(-3))   // hello world
+alert(test.substr(-3))     // rld
+
+alert(test.slice(3,-4))   // lo w
+alert(test.substring(3,-4))  // hel
+alert(test.substr(3,-4))   // 空字符串
+</code></pre><p>4、replace()-替换匹配的<br>    replace()方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的字串。</p>
+<pre><code>var str = &apos;abcdef&apos;;
+alert(str.replace(str.replace(&apos;abc&apos;,&apos;123&apos;))  // &apos;123def&apos;
+</code></pre><p>5、split()方法用于把一个字符串分割成字符串数组</p>
+<p><img src="http://o7j52x8bi.bkt.clouddn.com/603D7267-3486-4F24-B95A-EAED70D28E99.png" alt=""></p>
+<pre><code>&quot;hello&quot;.split(&quot;&quot;)   // [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]
+</code></pre><p>6、concat()-将一个字符串或多个字符串拼接起来，获得一个新的字符串。  </p>
+<pre><code>var str = &quot;abcdef&quot;
+var str2 = &quot;12345&quot;
+str.concat(str2)   // &quot;abcdef12345&quot;
+</code></pre><p>7、indexOf(),lastIndexOf()-获取字符串的位置，如果没有返回-1  </p>
+<p>indexOf()方法可返回某个指定的字符串值在字符串中首次出现的位置。<br>lastIndexOf()方法可返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。  </p>
+<pre><code>var str = &quot;abcdef&quot;
+str.indexOf(&quot;a&quot;)   // 0 
+str.lastIndexOf(&quot;a&quot;)  // 2  
+</code></pre><p>完。</p>
 
       
     </div>
