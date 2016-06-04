@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>前端与SEO | 前端的点滴</title>
+  <title>JS的面向对象进阶 | 前端的点滴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SEO中文译为搜索引擎优化。通俗理解为，通过总结搜索引擎的排名规律，对网站进行合理优化，使你的网站在百度和Google的排名提高。">
+  <meta name="description" content="此文着重讲解关于JS的面向对象中一些较难理解的点。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端与SEO">
-<meta property="og:url" content="http://yoursite.com/2016/05/14/seo1/index.html">
+<meta property="og:title" content="JS的面向对象进阶">
+<meta property="og:url" content="http://yoursite.com/2016/06/04/JS的面向对象进阶/index.html">
 <meta property="og:site_name" content="前端的点滴">
-<meta property="og:description" content="SEO中文译为搜索引擎优化。通俗理解为，通过总结搜索引擎的排名规律，对网站进行合理优化，使你的网站在百度和Google的排名提高。">
-<meta property="og:updated_time" content="2016-05-14T09:32:15.000Z">
+<meta property="og:description" content="此文着重讲解关于JS的面向对象中一些较难理解的点。">
+<meta property="og:updated_time" content="2016-06-04T06:33:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端与SEO">
-<meta name="twitter:description" content="SEO中文译为搜索引擎优化。通俗理解为，通过总结搜索引擎的排名规律，对网站进行合理优化，使你的网站在百度和Google的排名提高。">
+<meta name="twitter:title" content="JS的面向对象进阶">
+<meta name="twitter:description" content="此文着重讲解关于JS的面向对象中一些较难理解的点。">
   
     <link rel="alternative" href="/atom.xml" title="前端的点滴" type="application/atom+xml">
   
@@ -197,11 +197,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-seo1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS的面向对象进阶" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/14/seo1/" class="article-date">
-  	<time datetime="2016-05-14T08:29:12.000Z" itemprop="datePublished">2016-05-14</time>
+      <a href="/2016/06/04/JS的面向对象进阶/" class="article-date">
+  	<time datetime="2016-06-04T06:08:16.000Z" itemprop="datePublished">2016-06-04</time>
 </a>
     </div>
   
@@ -214,7 +214,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      前端与SEO
+      JS的面向对象进阶
     </h1>
   
 
@@ -223,7 +223,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SEO/">SEO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
 	</div>
 
         
@@ -234,19 +234,59 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>SEO中文译为搜索引擎优化。通俗理解为，通过总结搜索引擎的排名规律，对网站进行合理优化，使你的网站在百度和Google的排名提高。</p>
-<a id="more"></a>  
-<p>前端是构建网站中非常重要的一个环节，负责页面的HTML+CSS+JS，优化好这几个方面会为SEO工作打下一个良好的基础。  </p>
-<p>前端优化seo，主要有以下几种方法:  </p>
-<h2 id="合理利用meta标签"><a href="#合理利用meta标签" class="headerlink" title="合理利用meta标签"></a>合理利用meta标签</h2><p>meta标签具有两个对seo比较有用的属性，分别是keywords和description.  </p>
-<pre><code>&lt;meta name=“keywords” content=“”&gt;关键词以10-15个为宜   
+        <p>此文着重讲解关于JS的面向对象中一些较难理解的点。</p>
+<a id="more"></a>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>在函数中this到底取何值，是在函数真正被调用执行的时候确定的，函数定义的时候确定不了。因为this的取值是执行上下文环境的一部分，每次调用函数，都会产生一个新的执行上下文环境。  </p>
+<p>情况1：构造函数  </p>
+<p>所谓构造函数就是用来new对象的函数。其实严格来说，所有的函数都可以new一个对象，但是有些函数的定义是为了new一个对象，而有些函数则不是。另外注意，构造函数的函数名第一个字母大写（规则约定）。例如：Object、Array、Function等。</p>
+<pre><code>function Foo(){
+    this.name = &apos;name&apos;;
+    this.year = &apos;year&apos;;
+    console.log(this);
+}
 
-&lt;meta name=“description” content=“120|150 words” /&gt;描述部分控制在120-150个字符为宜。 
-</code></pre><h2 id="语义化书写HTML代码，符合W3C标准。"><a href="#语义化书写HTML代码，符合W3C标准。" class="headerlink" title="语义化书写HTML代码，符合W3C标准。"></a>语义化书写HTML代码，符合W3C标准。</h2><p>对搜索引擎来说，直接面对的是网页HTML代码，如果代码书写得语义化，搜索引擎就会很容易读懂网页要表达的意思。例如合理利用h1-h6标签，列表形式的代码使用ul或ol，重要的文字使用strong等等。  </p>
-<h2 id="为图片加上alt属性"><a href="#为图片加上alt属性" class="headerlink" title="为图片加上alt属性"></a>为图片加上alt属性</h2><pre><code>&lt;img src=&quot;dog.jpg&quot; alt=&quot;狗&quot; title=&quot;lovely&quot; /&gt;  
-</code></pre><p>当网络速度很慢，或图片地址失效时，可以体现alt属性的作用，让用户在图片没有显示的时候知道图片的作用。需要强调的地方加上title属性。  </p>
-<h2 id="尽量使用外链CSS和JS"><a href="#尽量使用外链CSS和JS" class="headerlink" title="尽量使用外链CSS和JS"></a>尽量使用外链CSS和JS</h2><p>这样做的好处是可以把内容、表现和行为分离开，保证代码整洁的同时方便维护。CSS放在文件头部，JS放在文件尾部，可以使用工具对CSS和JS文件进行压缩。</p>
-<h2 id="CSS-Sprites"><a href="#CSS-Sprites" class="headerlink" title="CSS Sprites"></a>CSS Sprites</h2><p>使用CSS Sprites可以把网页用到的切片合成到一张图上，这么做既减少了HTTP请求数，又使得样式图片一次加载，避免网页“白”的尴尬。</p>
+var f1 = new Foo();  // Foo {name:&quot;name&quot;,year:&quot;year&quot;}
+Foo();  // Window{external:Object,chrome:Object,document:document,lock:Object,SF:Object...}
+</code></pre><p>如果函数作为构造函数用，那么其中的this就代表它即将new出来的对象。<br>如果直接调用Foo函数，而不是new Foo()，这种情况下this是window。  </p>
+<p>情况2：函数作为对象的一个属性  </p>
+<pre><code>var obj = {
+    x:10,
+    fn:function(){
+        console.log(this);
+        console.log(this.x);
+    }
+}
+var fn1 = obj.fn;
+fn1();  // Window {external:Object,chrome:Object,document:document,lock:Object,SF:Object...} undefined
+obj.fn();  // Object {x:10} 10
+</code></pre><p>fn不仅作为一个对象的一个属性，而且的确是作为对象的一个属性被调用。结果this就是obj对象。<br>注意，如果fn函数不作为obj的一个属性被调用。如上代码，如果fn函数被赋值到了另一个变量中，并没有作为obj的一个属性被调用，那么this的值就是window，this.x为undefined。  </p>
+<p>情况3：函数用call或者apply调用<br>当一个函数被call和apply调用时，this的值取传入的对象的值。  </p>
+<pre><code>var obj = {
+    x : 1
+}
+
+var fn = function(){
+    console.log(this);
+    console.log(this.x);
+}
+
+fn.call(obj);  // Object {x:1} 1
+</code></pre><p>情况4：调用普通函数</p>
+<pre><code>var obj = {
+    x:10,
+    fn:function(){
+        console.log(this);  // Object{x:10}
+        console.log(this.x);  // 10
+        function f() {
+            console.log(this); // Window
+            console.log(this.x);  // undefined
+        }
+        f();
+    }
+}
+obj.fn();
+</code></pre><p>函数f虽然是在obj.fn内部定义的，但是它仍然是一个普通的函数，this仍然指向window。</p>
+<p>-未完待续</p>
 
       
     </div>
@@ -256,18 +296,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/14/caonima/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          调用第三方库解决移动端屏幕适配问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/14/buju1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Css的导航布局</div>
+    <a href="/2016/05/25/一些面试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一些面试题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -302,7 +333,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="seo1" data-title="前端与SEO" data-url="http://yoursite.com/2016/05/14/seo1/"></div>
+	<div class="ds-thread" data-thread-key="JS的面向对象进阶" data-title="JS的面向对象进阶" data-url="http://yoursite.com/2016/06/04/JS的面向对象进阶/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
