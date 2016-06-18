@@ -4,17 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: 标签 | 前端的点滴</title>
+  <title>php的文件相关操作 | 前端的点滴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="前端的点滴">
-<meta property="og:url" content="http://yoursite.com/tags/标签/index.html">
+  <meta name="description" content="作为前端，与后台的数据交互必不可少，所以了解一些后台的内容还是很有必要的。本篇主要介绍php中常见的文件处理操作。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php的文件相关操作">
+<meta property="og:url" content="http://yoursite.com/2016/06/14/php文件操作/index.html">
 <meta property="og:site_name" content="前端的点滴">
-<meta property="og:description">
+<meta property="og:description" content="作为前端，与后台的数据交互必不可少，所以了解一些后台的内容还是很有必要的。本篇主要介绍php中常见的文件处理操作。">
+<meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/30746999-F259-454E-BE15-3A7BD1238FFD.png">
+<meta property="og:updated_time" content="2016-06-17T02:20:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端的点滴">
-<meta name="twitter:description">
+<meta name="twitter:title" content="php的文件相关操作">
+<meta name="twitter:description" content="作为前端，与后台的数据交互必不可少，所以了解一些后台的内容还是很有必要的。本篇主要介绍php中常见的文件处理操作。">
+<meta name="twitter:image" content="http://o7j52x8bi.bkt.clouddn.com/30746999-F259-454E-BE15-3A7BD1238FFD.png">
   
     <link rel="alternative" href="/atom.xml" title="前端的点滴" type="application/atom+xml">
   
@@ -196,53 +199,171 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-php文件操作" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/12/伪元素/" class="archive-article-date">
-  	<time datetime="2016-05-12T14:49:13.000Z" itemprop="datePublished">5月 12</time>
+    <div class="article-meta">
+      <a href="/2016/06/14/php文件操作/" class="article-date">
+  	<time datetime="2016-06-14T11:49:04.000Z" itemprop="datePublished">2016-06-14</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/12/伪元素/">伪类与伪元素</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      php的文件相关操作
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/伪元素/">伪元素</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/标签/">标签</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作为前端，与后台的数据交互必不可少，所以了解一些后台的内容还是很有必要的。本篇主要介绍php中常见的文件处理操作。<br><a id="more"></a>  </p>
+<h2 id="打开与关闭文件"><a href="#打开与关闭文件" class="headerlink" title="打开与关闭文件"></a>打开与关闭文件</h2><p>1、fopen()  </p>
+<p>resource fopen (string filename,string mode)  </p>
+<p>fopen()函数将filename对应的resource绑定到一个stream上。  </p>
+<pre><code>$file = fopen(&quot;1.txt&quot;,&quot;r+&quot;);
+echo &quot;$file&quot;;
+</code></pre><p>文件的打开模式一共有以下几种，如图：<br><img src="http://o7j52x8bi.bkt.clouddn.com/30746999-F259-454E-BE15-3A7BD1238FFD.png" alt="">  </p>
+<p>推荐根据实际情况，使用r、w、a三种模式。 </p>
+<hr>
+<p>2、fclose()</p>
+<p>bool fclose (resource handle)  </p>
+<p>将handle指向的文件关闭。如果成功则返回true，失败则返回false。  </p>
+<p>虽然每个请求最后都会自动关闭文件，但明确地关闭打开的所有文件是一个好的习惯。  </p>
+<pre><code>fclose($file);
+</code></pre><hr>
+<h2 id="读写文件"><a href="#读写文件" class="headerlink" title="读写文件"></a>读写文件</h2><p>1、filesize()  </p>
+<p>filesize函数作用是获取指定文件的大小，参数是一个文件名（含路径）。返回值是文件大小，单位是字节。  </p>
+<pre><code>$filesize = filesize(&quot;1.txt&quot;);
+echo &quot;$filesize&quot;;
+</code></pre><hr>
+<p>2、fgetc()  </p>
+<p>fgetc函数是读取文件的一个字符，读完之后，文件光标会自动往后移动一位。  </p>
+<pre><code>for($i=0;$i&lt;$filesize;$i++){
+    $str = fgetc($file);
+    echo &quot;$str&quot;;
+}
+</code></pre><hr>
+<p>3、fgets()  </p>
+<p>fgets函数一次读取一行（以\n换行符作为判断的标准）  </p>
+<pre><code>$str = fgets($file,7);
+echo &quot;$str&quot;;
+</code></pre><p>其中第二个参数也可以指定长度。  </p>
+<hr>
+<p>4、fread()</p>
+<p>fread函数，读取指定长度的内容。读够了length或者到文件结尾会自动结束。</p>
+<pre><code>$str = fread($file,10);
+echo &quot;$str&quot;;
+</code></pre><hr>
+<p>5、fseek()</p>
+<p>fseek是用于更改文件光标位置的，有三个参数，文件，偏移量，参考位置。参考位置有三中，SEEK-SET,SEEK-CUR,SEEK-END。</p>
+<pre><code>fseek($file,9);
+$str = fgetc($file);
+echo &quot;$str&quot;;
+</code></pre><hr>
+<p>6、file_get_contents()  </p>
+<p>file_get_contents读取文件内容（全部），其实是fileopen,fgets(包含循环),fclose的封装。  </p>
+<pre><code>$allContents = file_get_contents(&quot;1.txt&quot;);
+echo &quot;$allContents&quot;;
+</code></pre><hr>
+<p>7、file()  </p>
+<p>file读取文件中的内容，生成一个数组（以\n作为分隔）</p>
+<pre><code>$array = file(&quot;1.txt&quot;);
+print_r($array);
+</code></pre><hr>
+<p>8、file_put_contents()</p>
+<p>file_put_contents函数是往指定文件里写入内容，默认打开方式是w,会清空原有内容。file_put_contents是fopen,fwrite,fclose的封装。</p>
+<pre><code>$str = &quot;ahahaha&quot;;
+file_put_contents(&quot;1.txt&quot;,$str);
+</code></pre><hr>
+<p>9、fwrite()</p>
+<p>fwrite作用是往文件里写入指定数据。如果写了参数3，限制了长度，那么我们参数2只会写入指定长度的字符。返回值是一个整数，告知你写入了多少个字符。</p>
+<pre><code>fwrite($file,&quot;speak&quot;);
+</code></pre><hr>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/04/JS的面向对象进阶/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS的面向对象进阶</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="php文件操作" data-title="php的文件相关操作" data-url="http://yoursite.com/2016/06/14/php文件操作/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -268,9 +389,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
