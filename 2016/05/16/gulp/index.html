@@ -12,16 +12,16 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/16/gulp/index.html">
 <meta property="og:site_name" content="前端的点滴">
 <meta property="og:description" content="Gulp.js是一个自动化构建工具，开发者可以使用它在项目开发过程中自动执行常见任务。Gulp.js是基于Node.js构建的，利用Node.js流的威力，你可以快速构建项目并减少频繁的IO操作。">
-<meta property="og:image" content="http://i2.buimg.com/68529e7b020b3e3d.png">
-<meta property="og:image" content="http://i2.buimg.com/b4a014b18a55690c.png">
-<meta property="og:image" content="http://i2.buimg.com/a3659dae6e4b1dea.png">
-<meta property="og:image" content="http://i4.buimg.com/e6bef86d1280eff4.png">
-<meta property="og:image" content="http://i4.buimg.com/12f5fb39f16f9d1c.png">
-<meta property="og:updated_time" content="2016-05-16T11:50:18.000Z">
+<meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/68529e7b020b3e3d.png">
+<meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/b4a014b18a55690c.png">
+<meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/a3659dae6e4b1dea.png">
+<meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/e6bef86d1280eff4.png">
+<meta property="og:image" content="http://o7j52x8bi.bkt.clouddn.com/12f5fb39f16f9d1c.png">
+<meta property="og:updated_time" content="2016-06-18T02:37:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp-基于流的自动化构建工具">
 <meta name="twitter:description" content="Gulp.js是一个自动化构建工具，开发者可以使用它在项目开发过程中自动执行常见任务。Gulp.js是基于Node.js构建的，利用Node.js流的威力，你可以快速构建项目并减少频繁的IO操作。">
-<meta name="twitter:image" content="http://i2.buimg.com/68529e7b020b3e3d.png">
+<meta name="twitter:image" content="http://o7j52x8bi.bkt.clouddn.com/68529e7b020b3e3d.png">
   
     <link rel="alternative" href="/atom.xml" title="前端的点滴" type="application/atom+xml">
   
@@ -242,9 +242,9 @@
       
         <p>Gulp.js是一个自动化构建工具，开发者可以使用它在项目开发过程中自动执行常见任务。Gulp.js是基于Node.js构建的，利用Node.js流的威力，你可以快速构建项目并减少频繁的IO操作。  </p>
 <a id="more"></a>
-<h2 id="gulp操作顺序"><a href="#gulp操作顺序" class="headerlink" title="gulp操作顺序"></a>gulp操作顺序</h2><p>1.创建项目文件夹<br>2.项目初始化   npm init，初始化后根目录下会多出一个package.json文件，内容如下图<br><img src="http://i2.buimg.com/68529e7b020b3e3d.png" alt="">，需注意的是，name不可以是gulp！main处填写入口主文件，author可以填写自己的名字。<br>3.全局安装gulp: 终端命令- npm install -g gulp<br>作为项目的开发依赖安装- npm install –save-dev gulp<br>ps:可以通过gulp.task()来测试是否运行，操作如下图,在根目录下新建一个gulpfile.js文件，在其中输入<br><img src="http://i2.buimg.com/b4a014b18a55690c.png" alt=""><br>之后进入终端下目录文件夹，运行gulp（注意default表示默认，如填写aa，运行gulp aa即可。），出现下图，表示成功！<br><img src="http://i2.buimg.com/a3659dae6e4b1dea.png" alt="">  </p>
+<h2 id="gulp操作顺序"><a href="#gulp操作顺序" class="headerlink" title="gulp操作顺序"></a>gulp操作顺序</h2><p>1.创建项目文件夹<br>2.项目初始化   npm init，初始化后根目录下会多出一个package.json文件，内容如下图<br><img src="http://o7j52x8bi.bkt.clouddn.com/68529e7b020b3e3d.png" alt="">，需注意的是，name不可以是gulp！main处填写入口主文件，author可以填写自己的名字。<br>3.全局安装gulp: 终端命令- npm install -g gulp<br>作为项目的开发依赖安装- npm install –save-dev gulp<br>ps:可以通过gulp.task()来测试是否运行，操作如下图,在根目录下新建一个gulpfile.js文件，在其中输入<br><img src="http://o7j52x8bi.bkt.clouddn.com/b4a014b18a55690c.png" alt=""><br>之后进入终端下目录文件夹，运行gulp（注意default表示默认，如填写aa，运行gulp aa即可。），出现下图，表示成功！<br><img src="http://o7j52x8bi.bkt.clouddn.com/a3659dae6e4b1dea.png" alt="">  </p>
 <p>3.安装gulp插件<br><a href="http://gulpjs.com/plugins/" target="_blank" rel="external">查询glup插件地址</a><br>在此推荐几个比较常用的，gulp-concat(合并文件)，gulp-jsmin，gulp-htmlmin,gulp-cssmin(压缩html，css，js文件)<br>安装方法也比较简单，终端输入命令，（以gulp-concat为例，）<br>npm install gulp-concat –save-dev<br>输入此命令即可安装gulp-concat插件，其他插件同理，只需改变名字。  </p>
-<p>4.gulp插件使用<br>首先创建一个js文件夹，在里面创建两个js文件，内容随便填写个简单函数（仅做测试），之后以gulp-concat作为测试。<br><img src="http://i4.buimg.com/e6bef86d1280eff4.png" alt=""><br>在gulpfile.js中输入上述内容，在终端中输入命令gulp cc会得到以下结果<br><img src="http://i4.buimg.com/12f5fb39f16f9d1c.png" alt=""><br>出现此图表示运行成功，在根目录会自动创建一个new2文件夹，里面有一个new33.js文件，内容为js文件夹下以js后缀的内容集合。<br>（解释下上述代码，首先声明两个变量，值等于require(‘..’)，必写！无论使用哪个插件，都必须声明gulp。之后使用gulp.task，cc代表函数名，你可以自己定义，gulp.src表示需要操作的目标文件，’’内为相对路径地址。.pipe(concat)表示调用何种方法，’’内为方法完成后的文件名，最后.pipe(gulp.dest)创建完成后的文件夹路径。）  </p>
+<p>4.gulp插件使用<br>首先创建一个js文件夹，在里面创建两个js文件，内容随便填写个简单函数（仅做测试），之后以gulp-concat作为测试。<br><img src="http://o7j52x8bi.bkt.clouddn.com/e6bef86d1280eff4.png" alt=""><br>在gulpfile.js中输入上述内容，在终端中输入命令gulp cc会得到以下结果<br><img src="http://o7j52x8bi.bkt.clouddn.com/12f5fb39f16f9d1c.png" alt=""><br>出现此图表示运行成功，在根目录会自动创建一个new2文件夹，里面有一个new33.js文件，内容为js文件夹下以js后缀的内容集合。<br>（解释下上述代码，首先声明两个变量，值等于require(‘..’)，必写！无论使用哪个插件，都必须声明gulp。之后使用gulp.task，cc代表函数名，你可以自己定义，gulp.src表示需要操作的目标文件，’’内为相对路径地址。.pipe(concat)表示调用何种方法，’’内为方法完成后的文件名，最后.pipe(gulp.dest)创建完成后的文件夹路径。）  </p>
 <hr>
 <p>到此，gulp的基础教程结束。gulp的功能很强大，有待一起学习挖掘！</p>
 
